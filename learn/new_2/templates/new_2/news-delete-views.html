@@ -1,0 +1,13 @@
+{% extends "new/loyal.html" %}
+
+{% block info %}Delete news{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Delete news</h1>
+        <form method="post">
+            <button class="btn btn-success" type="submit">Delete news</button>
+            {% csrf_token %}
+        </form>
+    </div>
+{% endblock %}

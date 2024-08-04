@@ -1,0 +1,27 @@
+{% extends "new/loyal.html" %}
+
+{% block info %}Home page{% endblock %}
+
+{% block content %}
+    <div class="home">
+        <h1>Home page</h1>
+        <p>Welcome to [Dreror-site]
+            I`m happy to welcome you to my platform! Here you will find everything you need for your convenience and success.</p>
+            <ul>My areas of expertise
+                We offer a wide range of services, specialising in working with leading libraries and frameworks:
+                <li>
+                    <b>Django</b>: A powerful and versatile web framework for building full-featured web applications. We offer website development and support, as well as Django project customisation and optimisation.
+                </li>
+                <li>
+                    <b>Aiogram</b>: A modern library for creating Telegram bots in Python. We can help you develop a bot of any complexity, from a simple assistant to a complex automation system.
+                </li>
+                <li>
+                    <b>Disnake</b>: A library for developing bots for Discord. We create and customise functional and interactive bots for your Discord community.
+                </li>
+                <li>
+                    <b>Sqlite3</b>: A lightweight and powerful database management system. We offer database development and optimisation services, ensuring database reliability and performance.
+                </li>
+            </ul>
+        <button class="btn btn-info"><a href="{% url 'about' %}">Read more about me</a></button>
+    </div>
+{% endblock %}

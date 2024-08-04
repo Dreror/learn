@@ -1,0 +1,18 @@
+{% extends "new/loyal.html" %}
+
+{% block info %}Add news{% endblock %}
+
+{% block content %}
+    <div class="form-create">
+        <h1>Form to add news</h1>
+        <form method="post">
+            {{ form.title }}<br>
+            {{ form.anons }}<br>
+            {{ form.full_text }}<br>
+            {{ form.date }}<br>
+            <span>{{ error }}</span>
+            <button class="btn btn-success" type="submit">Add new</button>
+            {% csrf_token %}
+        </form>
+    </div>
+{% endblock %}

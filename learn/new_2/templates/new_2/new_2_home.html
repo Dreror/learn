@@ -1,0 +1,23 @@
+{% extends "new/loyal.html" %}
+
+{% block info %}News{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <div class="news_home">
+            <h1>News</h1>
+            {% if news %}
+                {% for el in news %}
+                    <div class="news_post">
+                        <h2>{{ el.title|upper }}</h2>
+                        <a>{{ el.anons }}</a>
+                        <p></p>
+                        <a href="{% url 'news-detail' el.id %}" class="btn btn-info">Read more</a>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>You don`t have news</p>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
